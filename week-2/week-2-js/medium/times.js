@@ -8,6 +8,17 @@ Hint - use Date class exposed in JS
 There is no automated test for this one, this is more for you to understand time goes up as computation goes up
 */
 
+
+let date = new Date();
 function calculateTime(n) {
-    return 0.01;
+    let sum = 0;
+    const firstTimeStamp = Date.now()
+    console.log(`First timestamp is ${firstTimeStamp}`)
+    for (let i = 0; i <= n; i++) {
+        sum += i;
+    }
+    const SecondTimeStamp = Date.now()
+    console.log(`First timestamp is ${SecondTimeStamp}`)
+    return `Time elapsed is ${SecondTimeStamp - firstTimeStamp} ms`
 }
+console.log(calculateTime(100000))
