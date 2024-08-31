@@ -3,6 +3,7 @@
 */
 
 function wait(n) {
+    setTimeout(n)
 }
 
 module.exports = wait;
